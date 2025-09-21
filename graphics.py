@@ -18,3 +18,7 @@ Class Window:
         self.running = True
         while self.running == True:
             self.redraw()
+
+    def close(self):
+        self.running = False
+        self.__root.protocol("WM_DELETE_WINDOW", self.close)
