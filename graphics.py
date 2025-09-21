@@ -13,4 +13,8 @@ Class Window:
     def redraw(self):
         self.__root.update_idletasks()
         self.__root.update()
-        
+
+    def wait_for_close(self):
+        self.running = True
+        while self.running == True:
+            self.redraw()
